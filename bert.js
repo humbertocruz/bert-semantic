@@ -18,11 +18,11 @@ class BertAlert {
     ];
 
     this.icons = {
-      default: 'fa-bell',
-      success: 'fa-check',
-      info: 'fa-info',
-      warning: 'fa-warning',
-      danger: 'fa-remove'
+      default: 'bell icon',
+      success: 'check icon',
+      info: 'info icon',
+      warning: 'warning icon',
+      danger: 'remove icon'
     };
 
     this.defaults = {
@@ -42,7 +42,7 @@ class BertAlert {
   }
 
   isVisible() {
-    return $( '.bert-alert' ).hasClass( 'show' );
+    return $( '.bert-sui-alert' ).hasClass( 'show' );
   }
 
   handleAlert( alert ) {
@@ -53,8 +53,8 @@ class BertAlert {
   }
 
   registerClickHandler() {
-    $( '.bert-alert' ).off( 'click' );
-    $( '.bert-alert' ).on( 'click', () => { this.hide(); } );
+    $( '.bert-sui-alert' ).off( 'click' );
+    $( '.bert-sui-alert' ).on( 'click', () => { this.hide(); } );
   }
 
   bertTimer() {
@@ -64,16 +64,16 @@ class BertAlert {
   }
 
   show() {
-    $( '.bert-alert' ).addClass( 'show' ).delay( 25 ).queue( () => {
-      $( '.bert-alert' ).addClass( 'animate' ).dequeue();
+    $( '.bert-sui-alert' ).addClass( 'show' ).delay( 25 ).queue( () => {
+      $( '.bert-sui-alert' ).addClass( 'animate' ).dequeue();
     });
   }
 
   hide() {
-    $( '.bert-alert' ).removeClass( 'animate' );
+    $( '.bert-sui-alert' ).removeClass( 'animate' );
     setTimeout( () => {
-      $( '.bert-alert' ).removeClass( 'show' );
-      Session.set( 'bertAlert', null );
+      $( '.bert-sui-alert' ).removeClass( 'show' );
+      Session.set( 'bertSUIAlert', null );
     }, 300 );
   }
 
@@ -81,7 +81,7 @@ class BertAlert {
     if ( typeof alert[0] === 'object' ) {
       let type = alert[0].type || this.defaults.type;
 
-      Session.set( 'bertAlert', {
+      Session.set( 'bertSUIAlert', {
         title: alert[0].title || "",
         message: alert[0].message || "",
         type: type,
@@ -91,7 +91,7 @@ class BertAlert {
     } else {
       let type = alert[1] || this.defaults.type;
 
-      Session.set( 'bertAlert', {
+      Session.set( 'bertSUIAlert', {
         message: alert[0] || "",
         type: type,
         style: alert[2] || this.defaults.style,
@@ -101,4 +101,4 @@ class BertAlert {
   }
 }
 
-Bert = new BertAlert();
+BertSUI = new BertSUIAlert();
