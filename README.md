@@ -1,5 +1,5 @@
 ### Bert-UI
-Bert-UI is a client side, multi-style alerts system for Meteor and Semantic-UI.
+Bert-UI is a client side, multi-style alerts system for Meteor and Semantic-UI forked from [themeteorchef/bert](https://github.com/themeteorchef/bert).
 
 #### Contents
 1. Installation
