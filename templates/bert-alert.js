@@ -1,3 +1,3 @@
-Template.bertAlert.helpers({
-  alert() { return Session.get( 'bertAlert' ); }
+Template.bertSUIAlert.helpers({
+  alert() { return Session.get( 'bertSUIAlert' ); }
 });
