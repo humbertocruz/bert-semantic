@@ -1,7 +1,5 @@
-### Bert
-Bert is a client side, multi-style alerts system for Meteor.
-
-<img src="https://tmc-post-content.s3.amazonaws.com/bert-happy-mad.png" alt="Bert looking happy and mad.">
+### Bert-UI
+Bert-UI is a client side, multi-style alerts system for Meteor and Semantic-UI.
 
 #### Contents
 1. Installation
@@ -18,7 +16,7 @@ Bert is a client side, multi-style alerts system for Meteor.
 To get Bert into your app, just run the following command from within your project's directory:
 
 ```
-meteor add themeteorchef:bert
+meteor add humbertocruz:bert-semantic-ui
 ```
 
 #### Upgrade Warning
@@ -50,7 +48,7 @@ Which gets us what we'd expect:
 And now in v2.0 we also get the Advanced method...
 
 ```
-Bert.alert({
+BertUI.alert({
   title: 'Now Playing',
   message: 'Ernie &mdash; Rubber Duckie',
   type: 'info',
@@ -66,7 +64,7 @@ Which dresses up Bert with a bit of panache:
 It's important to point out that the Classic version has also picked up support for adding an icon, but requires that you specify all arguments before it:
 
 ```
-Bert.alert( 'Ernie, pick up your rubber duckies, now!', 'danger', 'fixed-top', 'fa-frown-o' );
+BertUI.alert( 'Ernie, pick up your rubber duckies, now!', 'danger', 'fixed-top', 'fa-frown-o' );
 ```
 
 ![Setting a classic style alert with an icon.](https://tmc-post-content.s3.amazonaws.com/bert-classic-with-icon.gif)
@@ -101,7 +99,7 @@ Bert wants to make sure that your users know how angry (or happy) he is about wh
 If you'd like (recommended), you can set any of the values above as defaults, along with a few other settings:
 
 ```js
-Bert.defaults = {
+BertUI.defaults = {
   hideDelay: 3500,
   // Accepts: a number in milliseconds.
   style: 'fixed-top',
