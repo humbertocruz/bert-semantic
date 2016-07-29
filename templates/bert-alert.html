@@ -1,10 +1,10 @@
-<template name="bertSUIAlert">
-  <div class="bert-sui-alert {{alert.style}} {{alert.type}} clearfix">
-    <div class="bert-sui-container">
-      <div class="bert-sui-gem">
+<template name="bertAlert">
+  <div class="bert-alert {{alert.style}} {{alert.type}} clearfix">
+    <div class="bert-container">
+      <div class="bert-gem">
         <i class="fa {{alert.icon}}"></i>
       </div>
-      <div class="bert-sui-content">
+      <div class="bert-content">
         {{#if alert.title}}<h5>{{alert.title}}</h5>{{/if}}
         <p>{{{alert.message}}}</p>
       </div>
